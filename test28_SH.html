@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function SubmitClick(){
+            var pwd=document.getElementById("txtPwd").value;
+            if(pwd.length<410 && pwd.length>10){
+                document.write(`password you entered contains ${pwd.length} Chars <br> You can entered password with max 10 chars only`.fontcolor("red").fontsize(10).italics().bold());
+            }else{
+                document.write("submitted successfully".fontcolor("green").fontsize(6));
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Password</legend>
+        <input type="password" id="txtPwd">
+        <button onclick="SubmitClick()">Submit</button>
+    </fieldset>
+    
+</body>
+</html>

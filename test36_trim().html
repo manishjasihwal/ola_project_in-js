@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <script>
+        function Verifypass(){
+            var password=document.getElementById("txtPwd").value;
+            var msg=document.getElementById("msg");
+            if(password=="manish123"){
+                msg.innerHTML="Password Verified";
+            }else{
+                msg.innerHTML="Invalid password";
+            }
+        }
+    </script>
+</head>
+<body>
+    Your password :
+    <input type="text" id="txtPwd" onblur="Verifypass()">
+    <div id="msg"></div>    
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <script>
+        function Verifypass(){
+            var password=document.getElementById("txtPwd").value;
+            var msg=document.getElementById("msg");
+            if(password.trim()=="manish123"){     //trim() removes extra space and verify 
+                msg.innerHTML="Password Verified";
+            }else{
+                msg.innerHTML="Invalid password";
+            }
+        }
+    </script>
+</head>
+<body>
+    Your password :
+    <input type="text" id="txtPwd" onblur="Verifypass()">
+    <div id="msg"></div>    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    function deleteclick() {
+    console.warn("Delete Clicked");
+      x = confirm("Record will be deleted");
+      if (x == true) {          
+        document.write("Record Deleted Successfully");
+      console.error("Delete Confirmed");
+      } else {
+        // document.write("Record Cancelled.......");
+        alert("Record Cancelled....");
+        console.info("Cancelled");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Output Demo</h2>
+  <button onclick="deleteclick()">delete</button>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function deleteclick() {
+        console.warn("Delete Clicked");
+        x = confirm("Record will be deleted");
+        // if (x == true) {
+        //   document.getElementById("msg").innerHTML="Record Deleted Successfully....";
+          
+        // } else {
+        //   document.getElementById("msg") .innerHTML="Recoed Cancelled.....";         
+        // }
+
+        msg=document.getElementById("msg");
+        if (x == true) {
+            msg.innerHTML=" <font color='green'> <b>Record Deleted Successfully....</b></font>";
+          
+        } else {
+              // msg.innerText="<font color='red'><b>Record Cancelled.....</b></font>";  
+              msg.outerHTML="<h2>Cancelled...</h2>";      
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Output Demo</h2>
+    <button onclick="deleteclick()">delete</button>
+     <!-- <div id="msg"></div> -->
+     <p id="msg"></p>
+     <!-- <h1 id="msg"></h1> -->
+  </body>
+</html>

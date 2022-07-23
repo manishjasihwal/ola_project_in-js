@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Getdetails(){
+            var email=document.getElementById("txtEmail").value;
+            var atPos=email.indexOf("@");
+            var id=email.substring(atPos , 0);
+            var domain=email.substring(atPos+1);
+            document.write(`Your id : ${id} <br> Registered @ : ${domain}`);
+        }
+    </script>
+</head>
+<body>
+    Email :
+    <input type="text" id="txtEmail">
+    <button onclick="Getdetails()">Submit</button>
+</body>
+</html>

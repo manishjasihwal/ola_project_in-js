@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel=" stylesheet" /> -->
+
+    <script>
+      function VerifyPassword() {
+        var password = document.getElementById("txtPwd").value;
+        var msg = document.getElementById("msg");
+        var regExp = /(?=.*[A-Z] )\w{4,15}/;
+        var statusbar=document.getElementById("statusbar");
+
+        function UpdateStatus(min , max , value){
+          statusbar.min=min;
+          statusbar.max=max;
+          statusbar.value=value;
+
+        }
+        if (password.match(regExp)) {
+          msg.innerHTML = "Strong Password";
+          UpdateStatus(1 , 100 , 100);
+         
+        } else {
+          if (password.length < 4) {
+            msg.innerHTML = "poor password";
+            UpdateStatus(1 , 100 , 20);
+          } else {
+            msg.innerHTML = "Weak Password";
+            UpdateStatus(1 , 100 , 70);
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Password</legend>
+      <input type="password" id="txtPwd" onkeyup="VerifyPassword()" />
+      <span id="msg"></span>
+      <div class="">
+        <!-- <progress></progress> -->
+        <meter id="statusbar"    style="width: 200px; height: 30px;"> </meter>
+      </div>
+  
+    </fieldset>
+  </body>
+</html>
