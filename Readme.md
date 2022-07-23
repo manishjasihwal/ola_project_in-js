@@ -1,1 +1,6 @@
-###Sample Javascript project
+### Sample Javascript project
+ 
+ ---
+ 
+ Some description added here
+
